@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ranjith N — Professional Portfolio</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#0b3d91; /* deep navy */
+      --accent:#0ea5a2; /* teal */
+      --muted:#6b7280;
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --glass: rgba(255,255,255,0.6);
+    }
+    html,body{height:100%;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#111827}
+    .navbar{background:linear-gradient(90deg,rgba(11,61,145,0.06),transparent)}
+    .hero{background:linear-gradient(180deg,rgba(11,61,145,0.06),transparent);padding:5rem 0}
+    .hero .name{font-weight:700;color:var(--primary)}
+    .lead-weak{color:var(--muted)}
+    .card-shadow{box-shadow:0 6px 18px rgba(15,23,42,0.06);border:none}
+    .skill-badge{background:rgba(14,165,162,0.08);color:var(--accent);border-radius:8px;padding:.25rem .5rem;font-weight:600}
+
+    /* Progress bars */
+    .progress{height:10px;border-radius:8px;background:rgba(2,6,23,0.04)}
+    .progress-bar{background:linear-gradient(90deg,var(--primary),var(--accent));}
+
+    /* Timeline */
+    .timeline{position:relative;padding-left:1.5rem}
+    .timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:rgba(11,61,145,0.08)}
+    .timeline-item{position:relative;padding:1rem 1rem 1rem 1.75rem;margin-bottom:.75rem}
+    .timeline-item::before{content:'';position:absolute;left:-6px;top:1.25rem;width:12px;height:12px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 4px rgba(11,61,145,0.06)}
+
+    /* Projects */
+    .project-card{transition:transform .25s ease, box-shadow .25s ease}
+    .project-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(2,6,23,0.08)}
+
+    footer{padding:2rem 0;color:var(--muted)}
+
+    /* Responsive tweaks */
+    @media (max-width:767px){
+      .hero{padding:3rem 0}
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100" tabindex="0">
+
+  <!-- NAVBAR -->
+  <nav id="mainNav" class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-dark" href="#hero">RANJITH N</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="hero" class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-5 name">RANJITH N</h1>
+          <p class="lead lead-weak">B.Sc. Computer Science & Data Analytics | Aspiring Game Developer & Data Enthusiast</p>
+          <p class="mb-4">Computer Science student with strong programming and problem-solving skills. Experienced in Python, C/C++, Web Development and data-focused projects. I build practical systems — from assistive vision tools to smart hardware solutions.</p>
+
+          <div class="d-flex gap-2 mb-3">
+            <a class="btn btn-primary btn-sm" href="#projects">View Projects</a>
+            <a class="btn btn-outline-primary btn-sm" href="D:\port\Professional Modern CV Resume (2).pdf" target="_blank">Download Resume</a>
+          </div>
+
+          <div class="d-flex gap-3 align-items-center mt-3">
+            <a href="https://www.linkedin.com/in/ranjith-n-b815a0315/" target="_blank" class="text-decoration-none">LinkedIn</a>
+            <a href="https://github.com/RANJITH08" target="_blank" class="text-decoration-none">GitHub</a>
+            <span class="text-muted">•</span>
+            <span class="text-muted">7604960261</span>
+          </div>
+
+        </div>
+        <div class="col-lg-5 text-center mt-4 mt-lg-0">
+          <!-- Simple SVG avatar -->
+          <div class="card card-shadow p-4 mx-auto" style="max-width:260px;background:linear-gradient(180deg,#fff,rgba(14,165,162,0.03))">
+            <div class="rounded-circle bg-white mx-auto" style="width:110px;height:110px;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:700;color:var(--primary)">RN</div>
+            <div class="mt-3 text-start">
+              <h5 class="mb-0">RANJITH N</h5>
+              <small class="text-muted">B.Sc. Computer Science & Data Analytics</small>
+              <p class="mb-0 mt-2" style="font-size:.9rem">Coimbatore / KPR College of Arts Science And Research</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- ABOUT -->
+    <section id="about" class="mb-5">
+      <div class="row">
+        <div class="col-lg-8">
+          <h3>About</h3>
+          <p>I'm a motivated Computer Science student pursuing a B.Sc. in Computer Science and Data Analytics (2023-2026). I enjoy building practical projects that combine software and hardware, and I'm always learning new tools and techniques to grow as a developer and team member.</p>
+        </div>
+        <div class="col-lg-4">
+          <div class="card card-shadow p-3">
+            <h6 class="mb-2">Quick Facts</h6>
+            <p class="mb-1"><strong>Email:</strong> ranjithstudent008@gmail.com</p>
+            <p class="mb-1"><strong>Phone:</strong> 7604960261</p>
+            <p class="mb-1"><strong>Interests:</strong> Game Dev, Animation, Data Science</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="mb-5">
+      <h3 class="mb-3">Technical & Soft Skills</h3>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card card-shadow p-3">
+            <h6>Technical Skills</h6>
+            <div class="mt-3">
+              <div class="d-flex justify-content-between small mb-1"><span>C / C++</span><span>80%</span></div>
+              <div class="progress mb-3"><div class="progress-bar" role="progressbar" style="width:80%"></div></div>
+
+              <div class="d-flex justify-content-between small mb-1"><span>Python & OpenCV</span><span>75%</span></div>
+              <div class="progress mb-3"><div class="progress-bar" role="progressbar" style="width:75%"></div></div>
+
+              <div class="d-flex justify-content-between small mb-1"><span>Web Development (HTML/CSS/Bootstrap)</span><span>70%</span></div>
+              <div class="progress mb-3"><div class="progress-bar" role="progressbar" style="width:70%"></div></div>
+
+              <div class="d-flex justify-content-between small mb-1"><span>mySQL, Git</span><span>65%</span></div>
+              <div class="progress mb-3"><div class="progress-bar" role="progressbar" style="width:65%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card card-shadow p-3">
+            <h6>Soft Skills</h6>
+            <ul class="mb-0">
+              <li>Adaptability</li>
+              <li>Teamwork & Leadership</li>
+              <li>Creativity & Problem Solving</li>
+            </ul>
+
+            <div class="mt-3">
+              <span class="skill-badge me-2">Game Dev</span>
+              <span class="skill-badge me-2">Animation</span>
+              <span class="skill-badge">Data Science</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="mb-5">
+      <h3 class="mb-3">Education</h3>
+      <div class="card card-shadow p-3">
+        <div class="timeline">
+          <div class="timeline-item">
+            <h6 class="mb-1">B.Sc. in Computer Science & Data Analytics</h6>
+            <small class="text-muted">KPR College of Arts Science And Research — 2023 - 2026</small>
+            <p class="mb-0 mt-2">Focused on programming, data analysis, and product development practices.</p>
+          </div>
+
+          <div class="timeline-item">
+            <h6 class="mb-1">HSC — Computer Application & Accounting</h6>
+            <small class="text-muted">Saradha Vidhyalaya Mat.Hr.Sec.School — 2022 - 2023</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!-- PROJECTS -->
+<section id="projects" class="mb-5">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3 class="mb-0">Projects</h3>
+  </div>
+
+  <div class="row g-3">
+    <!-- Project 1 -->
+    <div class="col-md-4">
+      <div class="card project-card card-shadow p-3">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h5 class="mb-1">Blind Vision — Assistive Object Detection</h5>
+            <small class="text-muted">Team Project</small>
+            <p class="mb-1">YOLOv4 + OpenCV for object detection with distance alerts; Flask + TTS for voice guidance.</p>
+            <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#proj1">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="col-md-4">
+      <div class="card project-card card-shadow p-3">
+        <h5 class="mb-1">Smart Fire Alarm System</h5>
+        <small class="text-muted">C++ / Embedded</small>
+        <p class="mb-1">Fire detection using sensors, automated email alerts and initial cooling response.</p>
+        <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#proj2">Read more</a>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="col-md-4">
+      <div class="card project-card card-shadow p-3">
+        <h5 class="mb-1">FOOTOPIA — UI Design</h5>
+        <small class="text-muted">UI/UX Project</small>
+        <p class="mb-1">Designed an attractive and intuitive user interface for a sports platform app.</p>
+        <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#proj3">Read more</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Modals -->
+  <div class="modal fade" id="proj1" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Blind Vision — Assistive Object Detection</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Overview:</strong> Built a real-time assistive system using YOLOv4 and OpenCV to detect objects and estimate distance. Integrated a Flask backend and text-to-speech (TTS) module to provide voice guidance for visually impaired users.</p>
+          <p><strong>My role:</strong> Implemented object detection pipeline, distance estimation algorithm and integrated TTS. Helped design system architecture and testing procedures.</p>
+          <p><strong>Tech:</strong> Python, OpenCV, YOLOv4, Flask, TTS</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="proj2" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Smart Fire Alarm System</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Overview:</strong> Using microcontroller and sensors to detect fire/smoke, send notification emails to concerned persons and activate a cooling fan as an initial mitigation step.</p>
+          <p><strong>My role:</strong> Firmware development in C++, sensor integration, testing and notification workflow.</p>
+          <p><strong>Tech:</strong> C++, Embedded Systems, Email API integration</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="proj3" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">FOOTOPIA — UI Design</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Overview:</strong> Designed an attractive and modern UI for “FOOTOPIA”.</p>
+          <p><strong>My role:</strong> UI/UX Designer — focused on layout structure, color palette, and interactive user flows.</p>
+          <p><strong>Tech:</strong> Figma, Photoshop</p>
+          <p><strong>Highlights:</strong> Built clean and accessible design components to enhance visual engagement and usability.</p>
+          <p><a href="https://www.figma.com/design/7YZsycgSzzN1FiDq7MnAz9/Untitled?node-id=0-1&t=ZBYEpS99MurOpWxN-1"<strong>LINK</strong></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="mb-5">
+      <h3 class="mb-3">Achievements & Activities</h3>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card card-shadow p-3">
+            <h6 class="mb-1">Asian Books of Records</h6>
+            <p class="mb-0">Recognized for team achievements.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card card-shadow p-3">
+            <h6 class="mb-1">District Throwball Winner (Captain)</h6>
+            <p class="mb-0">Led the team to win district-level competition.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERESTS -->
+    <section id="interests" class="mb-5">
+      <h3 class="mb-3">Interests</h3>
+      <div class="card card-shadow p-3">
+        <p class="mb-0">Video Editing • Sketching • Game Development • Animation</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mb-5">
+      <h3 class="mb-3">Contact</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-shadow p-3">
+            <h6>Get in touch</h6>
+            <p class="mb-1">Email: <a href="mailto:ranjithstudent008@gmail.com">ranjithstudent008@gmail.com</a></p>
+            <p class="mb-1">Phone: 7604960261</p>
+            <p class="mb-0">LinkedIn: <a href="https://www.linkedin.com/in/ranjith-n-b815a0315/" target="_blank">View profile</a></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <form class="card card-shadow p-3" action="mailto:ranjithstudent008@gmail.com" method="post" enctype="text/plain">
+            <div class="mb-2">
+              <label class="form-label">Name</label>
+              <input class="form-control" name="name" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Email</label>
+              <input class="form-control" type="email" name="email" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="4" name="message" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white border-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <small>© <span id="year"></span> Ranjith N — All rights reserved.</small>
+      <div>
+        <a class="me-3 text-decoration-none" href="https://github.com/RANJITH08" target="_blank">GitHub</a>
+        <a class="text-decoration-none" href="https://www.linkedin.com/in/ranjith-n-b815a0315/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a.nav-link, a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const href = this.getAttribute('href');
+        if(href && href.startsWith('#')){
+          e.preventDefault();
+          const el = document.querySelector(href);
+          if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+          // collapse navbar on mobile
+          const bsCollapse = document.querySelector('.navbar-collapse');
+          if(bsCollapse && bsCollapse.classList.contains('show')){
+            new bootstrap.Collapse(bsCollapse).hide();
+          }
+        }
+      })
+    });
+  </script>
+</body>
+</html>
